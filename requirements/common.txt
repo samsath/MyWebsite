@@ -25,3 +25,4 @@ pyparsing == 2.0.3
 django-mediastore == 0.7.0
 beautifulsoup4 == 4.4.0
 sorl-thumbnail == 12.3
+django-angular == 0.7.15

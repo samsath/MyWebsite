@@ -5,6 +5,8 @@
     "jquery": "1.11.3",
     "underscore": "1.8.3",
     "history.js": "~1.8.0",
-    "modernizr": "2.8.3"
+    "modernizr": "2.8.3",
+    "bootstrap":"3.3.5",
+    "angular":"1.4.4"
   }
 }
