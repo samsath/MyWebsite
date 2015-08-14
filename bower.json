@@ -1,12 +1,15 @@
 {
   "name": "website",
   "version": "1.0.0",
+  "directory" : "static/lib",
   "dependencies": {
     "jquery": "1.11.3",
     "underscore": "1.8.3",
     "history.js": "~1.8.0",
     "modernizr": "2.8.3",
     "bootstrap":"3.3.5",
-    "angular":"1.4.4"
+    "angular":"1.4.4",
+    "angular-mocks": "1.4.4",
+    "angular-route": "1.4.4"
   }
 }
