@@ -1,10 +1,14 @@
 language: python
 python:
   - "2.7"
-sudo: required
 install:
   # Build/test dependencies
-  - fab devinit
+  - pip install -r requirements/common.txt
+  - npm install
+  - bower install
+  - gulp
+  - ./manage.py migrate --noinput
+  - ./manage.py loaddata config/adminuser.json
 script:
   # Integration tests
   - ./manage.py test website
