@@ -3,13 +3,21 @@
   "version": "1.0.0",
   "directory" : "static/lib",
   "dependencies": {
-    "jquery": "1.11.3",
+    "jquery": "2.1.4",
     "underscore": "1.8.3",
     "history.js": "~1.8.0",
     "modernizr": "2.8.3",
     "bootstrap":"3.3.5",
-    "angular":"1.4.4",
+    "angular":"1.4.5",
     "angular-mocks": "1.4.4",
-    "angular-route": "1.4.4"
+    "angular-route": "1.4.4",
+    "angular-animate": "1.4.4",
+    "angular-cookies":"1.4.4",
+    "angular-resource":"1.4.4",
+    "angularjs-geolocation":"",
+    "angular-ui-router":"0.2.15",
+    "angular-sanitize":"1.4.5",
+    "angular-cookies":"1.4.5",
+    "rainbow":"https://github.com/anomal/RainbowVis-JS.git"
   }
 }

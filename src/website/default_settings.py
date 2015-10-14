@@ -77,6 +77,12 @@ INSTALLED_APPS = (
     'sorl.thumbnail',
     'taggit',
     'tinymce',
+    'tastypie',
+
+    'website.themes',
+    'website.file',
+    'website.portfolio',
+    'website.colorpicker',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -110,29 +116,37 @@ TEMPLATES = [
 WSGI_APPLICATION = 'website.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+TIME_ZONE = 'Europe/London'
+LANGUAGE_CODE = 'en'
 USE_I18N = True
-
-USE_L10N = True
-
 USE_TZ = True
+USE_L10N = True
+DATE_FORMAT = 'F jS Y'
+
+DATE_INPUT_FORMATS = (
+    '%d/%m/%Y', '%d/%m/%Y', '%d/%m/%y', '%d/%m/%Y', # '2006-10-25', '25/10/2006', '25/10/06'
+    '%b %d %Y', '%b %d, %Y',            # 'Oct 25 2006', 'Oct 25, 2006'
+    '%d %b %Y', '%d %b, %Y',            # '25 Oct 2006', '25 Oct, 2006'
+    '%B %d %Y', '%B %d, %Y',            # 'October 25 2006', 'October 25, 2006'
+    '%d %B %Y', '%d %B, %Y',            # '25 October 2006', '25 October, 2006'
+)
+DATETIME_INPUT_FORMATS = (
+    '%Y-%m-%d %H:%M:%S',     # '2006-10-25 14:30:59'
+    '%Y-%m-%d %H:%M:%S.%f',  # '2006-10-25 14:30:59.000200'
+    '%Y-%m-%d %H:%M',        # '2006-10-25 14:30'
+    '%Y-%m-%d',              # '2006-10-25'
+    '%d/%m/%Y %H:%M:%S',     # '25/10/2006 14:30:59'
+    '%d/%m/%Y %H:%M:%S.%f',  # '25/10/2006 14:30:59.000200'
+    '%d/%m/%Y %H:%M',        # '25/10/2006 14:30'
+    '%d/%m/%Y',              # '25/10/2006'
+    '%d/%m/%y %H:%M:%S',     # '25/10/06 14:30:59'
+    '%d/%m/%y %H:%M:%S.%f',  # '25/10/06 14:30:59.000200'
+    '%d/%m/%y %H:%M',        # '25/10/06 14:30'
+    '%d/%m/%y',              # '25/10/06'
+)
 
 
 # Static files (CSS, JavaScript, Images)
@@ -147,3 +161,30 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),
 )
+
+##############################################################################
+#                          Data_API using  tastypie                          #
+##############################################################################
+TASTYPIE_DEFAULT_FORMATS = ['json', 'jsonp', 'xml', 'html']
+TASTYPIE_ALLOW_MISSING_SLASH = True
+
+##############################################################################
+#                          TINYMCE                                           #
+##############################################################################
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': 'inlinepopups,safari',
+    'theme': 'advanced',
+    'theme_advanced_disable': 'underline,strikethrough,justifyleft,justifycenter,justifyright,justifyfull,numlist,outdent,indent,hr,styleselect,sub,sup',
+    'theme_advanced_toolbar_location': 'top',
+    'theme_advanced_toolbar_align': 'left',
+    'relative_urls': False,
+    'dialog_type': 'modal',
+    'entity_encoding': 'raw',
+}
+
+TINYMCE_JS_URL = '/static/tiny_mce/tiny_mce.js'
+TINYMCE_JS_ROOT = '/static/tiny_mce/tiny_mce.js'
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+
