@@ -7,7 +7,7 @@ install:
   - npm install
   - bower install
   - gulp
-  - ./travemanage.py migrate --noinput
+  - ./travemanage.py migrate
   - ./travemanage.py loaddata config/adminuser.json
 script:
   # Integration tests
