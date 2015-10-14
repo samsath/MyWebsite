@@ -19,5 +19,8 @@
     "angular-sanitize":"1.4.5",
     "angular-cookies":"1.4.5",
     "rainbow":"https://github.com/anomal/RainbowVis-JS.git"
+  },
+  "resolutions": {
+    "angular": "1.4.5"
   }
 }
