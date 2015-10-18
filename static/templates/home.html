@@ -4,7 +4,11 @@
     </div>
 
     <div class="col-sm-9 col-md-9 col-lg-10 fullheight mainarea">
-        <p> projects </p>
+        <div class="projects col-md-10 col-md-offset-1">
+            <div class="item" ng-repeat="proj in projects" style="background-image:url({$ proj.cover.url $});">
+                <p>{$ proj.title $}</p>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -8,7 +8,7 @@ angular.module('personal.services').service('WorkSrv',['$http', function($http){
 
     feed.getall = function(){
         return $http.get(url + format).then(function(res){
-            return new feed(res.data);
+            return new feed(res.data.objects);
         });
     };
 
