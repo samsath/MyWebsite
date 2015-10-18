@@ -1,0 +1,39 @@
+body{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+  font-family: 'Source Code Pro', monospace;
+}
+
+.sitename{
+  position: relative;
+  display:inline-block;
+  float:right;
+}
+
+.fullheight{
+  height:100%;
+
+  &.sidepannel {
+    background-image: url(../img/dark-denim.png);
+    transition: background-color 2s;
+
+    &.black{
+      background-color: black;
+    }
+
+    &.white{
+      background-color: white;
+    }
+
+  }
+  &.mainarea{
+    background-color:#006b6b;
+    background-image: url(../img/mooning.png);
+    background-size:50%;
+    transition: background-color 2s;
+  }
+}

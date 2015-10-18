@@ -1,0 +1,60 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en" ng-app="personal">
+<head>
+    <meta charset="UTF-8">
+    <title>Sam Hipwell</title>
+    <base href="/">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <meta name="description" content="Personal website displaying " />
+    <meta name="keywords" content="" />
+    <meta name="author" content="content: Sam Hipwell, website: www.samhipwell.org.uk" />
+    <meta name="copyright" content="website (c) Copyright Sam Hipwell" />
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta property="og:title" content="Sam Hipwell">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="www.samhipwell.org.uk">
+    <meta property="og:image" content="{% static 'icons/android/playstore-icon.png' %}">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:description" content="Website to support ">
+    <meta name="theme-color" content="#2B2B2B"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,700,900,600,300,200' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/bootstrap/dist/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}" >
+
+    <!-- script for the item -->
+    <script src="{% static 'libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/underscore/underscore-min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'libs/angular/angular.js' %}"></script>
+    <script src="{% static 'libs/angular-mocks/angular-mocks.js' %}"></script>
+    <script src="{% static 'libs/angular-route/angular-route.js' %}"></script>
+    <script src="{% static 'libs/angular-animate/angular-animate.js' %}"></script>
+    <script src="{% static 'libs/angular-ui-router/release/angular-ui-router.js' %}"></script>
+    <script src="{% static 'libs/angular-sanitize/angular-sanitize.js' %} "></script>
+    <script src="{% static 'libs/angular-cookies/angular-cookies.js' %} "></script>
+    <script src="{% static 'libs/angular-resource/angular-resource.js' %} "></script>
+
+    <!--App -->
+    <script src="{% static 'angular/app.j' %}s"></script>
+    <script src="{% static 'angular/controller.js' %}"></script>
+    <script src="{% static 'angular/service.js' %}"></script>
+
+    <script src="{% static 'angular/controller/homectrl.js' %}"></script>
+    <script src="{% static 'angular/controller/projectctrl.js' %}"></script>
+
+    <script src="{% static 'angular/services/worksrv.js' %}"></script>
+    <script src="{% static 'angular/services/filesrv.js' %}"></script>
+    <script src="{% static 'angular/services/linksrv.js' %}"></script>
+    <script src="{% static 'angular/services/themesrv.js' %}"></script>
+</head>
+<body>
+    <ui-view></ui-view>
+</body>
+</html>
