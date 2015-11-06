@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6, p, a {
     background-image: url(../img/dark-denim.png);
     transition: background-color 2s; }
     .fullheight.sidepannel.black {
-      background-color: #616161; }
+      background-color: #616161;
+      border-right: solid lime; }
       .fullheight.sidepannel.black .sitename {
         color: white; }
     .fullheight.sidepannel.white {
