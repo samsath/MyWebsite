@@ -18,6 +18,12 @@ angular.module('personal.services').service('WorkSrv',['$http', function($http){
         });
     };
 
+    feed.slug = function(id){
+        return $http.get(url + '/?slug=' + id + '&format=json').then(function(res){
+            return new feed(res.data);
+        });
+    };
+
     return feed;
 
 }]);

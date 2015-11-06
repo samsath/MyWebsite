@@ -1,0 +1,23 @@
+<div class="row margintop50">
+    <div class="col-md-10 col-md-offset-1">
+        <img  ng-src="{$ work.cover.file $}" class="img-responsive"/>
+    </div>
+
+</div>
+<div class="row profileblock">
+    <div class="col-md-10 col-md-offset-1">
+        <p ng-bind-html="work.title" class="title"></p>
+        <p ng-bind-html="work.headline" class="headline"></p>
+        <p ng-bind-html="work.description" class="maintext"></p>
+
+        <div class="imageallery">
+            <div class="img-space" ng-repeat="image in work.content">
+                <img  ng-src="{$ image.file $}" class="img-responsive img-space"/>
+                <p ng-bind-html="image.title"></p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="margbtm"></div>

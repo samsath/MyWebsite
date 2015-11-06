@@ -1,6 +1,6 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
-<html lang="en" ng-app="personal">
+<html lang="en" data-ng-app="personal">
 <head>
     <meta charset="UTF-8">
     <title>Sam Hipwell</title>
@@ -47,7 +47,9 @@
     <script src="{% static 'angular/service.js' %}"></script>
 
     <script src="{% static 'angular/controller/homectrl.js' %}"></script>
+    <script src="{% static 'angular/controller/homecontrolsctrl.js' %}"></script>
     <script src="{% static 'angular/controller/projectctrl.js' %}"></script>
+    <script src="{% static 'angular/controller/projectctrctrl.js' %}"></script>
 
     <script src="{% static 'angular/services/worksrv.js' %}"></script>
     <script src="{% static 'angular/services/filesrv.js' %}"></script>
@@ -55,6 +57,16 @@
     <script src="{% static 'angular/services/themesrv.js' %}"></script>
 </head>
 <body>
-    <ui-view></ui-view>
+    <div class="col-sm-3 col-md-3 col-lg-2 fullheight sidepannel black">
+        <div class="namesect">
+            <h1 class="sitename top">Samuel</h1>
+            <h1 class="sitename bottom">Hipwell</h1>
+        </div>
+        <div ui-view="controls" class="controllsect"></div>
+    </div>
+    <div class="col-sm-9 col-md-9 col-lg-10 fullheight mainsection mainarea">
+        <div ui-view="main"></div>
+    </div>
+
 </body>
 </html>

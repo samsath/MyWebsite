@@ -29,7 +29,7 @@ class WorkResource(ModelResource):
     content = fields.ToManyField(FileResources, 'content', full=True, null=True)
     themes = fields.ToManyField(ThemeResources, 'themes', full=True, null=True)
     links = fields.ToManyField(LinkResources, 'links', full=True, null=True)
-    related = fields.ToManyField('self', 'related', full=True, null=True)
+    related = fields.ToManyField('self', 'related', full=False, null=True)
 
     class Meta:
         queryset = Work.objects.filter(is_public=True)
@@ -37,3 +37,11 @@ class WorkResource(ModelResource):
         allowed_methods = ['get',]
         limit = 0
         max_limit = 0
+        filtering = {
+            'id': ALL,
+            'title': ALL,
+            'slug': ALL,
+            'created': ALL,
+            'modified': ALL,
+            'url': ALL
+        }

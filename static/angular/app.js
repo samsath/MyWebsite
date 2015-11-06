@@ -21,18 +21,33 @@ angular.module('personal',['ngSanitize','ngRoute','ui.router','ngAnimate','perso
 
     .config(function($stateProvider, $urlRouterProvider, $locationProvider){
 
-        $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
             .state("home",{
-                url:"/",
-                templateUrl:'/static/templates/home.html',
-                controller:'HomeCtrl'
+                views:{
+                    'controls':{
+                        templateUrl:'/static/templates/home.control.html',
+                        controller:'HomeLeftCtrl'
+                    },
+                    'main':{
+                        templateUrl:'/static/templates/home.list.html',
+                        controller:'HomeCtrl'
+                    }
+                },
+                url:"/"
             })
             .state("project",{
                 url:"/project/:name",
-                templateUrl:'/static/templates/project.html',
-                controller:'ProjectCtrl'
+                views:{
+                    'controls':{
+                        templateUrl:'/static/templates/project.control.html',
+                        controller:'ProjectCtrCtrl'
+                    },
+                    'main':{
+                        templateUrl:'/static/templates/project.list.html',
+                        controller:'ProjectCtrl'
+                    }
+                }
             })
     });

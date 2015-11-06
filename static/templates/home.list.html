@@ -1,0 +1,11 @@
+
+<ul class="projects">
+    <li class="item"  ng-repeat="proj in projects" style="background-image:url({$ proj.cover.url $});">
+        <a ng-href="#/project/{$ proj.slug $}" ng-animate-ref="{$ proj.id $}">
+            <div class="item-hover">
+                <p ng-bind-html="proj.title"></p>
+            </div>
+        </a>
+    </li>
+</ul>
+

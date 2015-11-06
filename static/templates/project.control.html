@@ -1,0 +1,13 @@
+<div>
+    <p class="back" ng-click="clearDetails()">back</p>
+
+    <p class="date" ng-bind-html="left.date" ng-if="left.date"></p>
+    <ul class="themes" ng-if="left.themes.length > 0">
+        <li class="theme-item bold">Themes</li>
+        <li class="theme-item" ng-repeat="them in left.themes" style="color:{$ them.background $};" ng-bind-html="them.title"></li>
+    </ul>
+    <ul class="links" ng-if="left.links.length > 0">
+        <li class="link-item bold">Related Links</li>
+        <li class="link-item" ng-repeat="lnk in left.links" ><a ng-href="{$ lnk.url $}" target="_blank" style="color:{$ lnk.background $};">{$ lnk.title $}</a></li>
+    </ul>
+</div>
