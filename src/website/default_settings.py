@@ -102,6 +102,8 @@ INSTALLED_APPS = (
     'website.file',
     'website.portfolio',
     'website.colorpicker',
+    'website.cv',
+    'website.blog',
 )
 
 MIDDLEWARE_CLASSES = (

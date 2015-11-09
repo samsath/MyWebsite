@@ -46,6 +46,9 @@ class Skills(models.Model):
     created = CreationDateTimeField()
     modified = ModificationDateTimeField()
 
+    def __unicode__(self):
+        return self.title
+
 
 class CV(models.Model):
     title = models.CharField(max_length=255, verbose_name="Title")
@@ -56,5 +59,6 @@ class CV(models.Model):
     left = models.TextField(_('Description left'), blank=True, null=True)
     education = models.ManyToManyField(Education, verbose_name='Education', blank=True, null=True)
     job = models.ManyToManyField(Jobs, verbose_name='Jobs', blank=True, null=True)
-    created = CreationDateTimeField()
-    modified = ModificationDateTimeField()
+
+    def __unicode__(self):
+        return self.title
